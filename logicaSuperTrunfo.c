@@ -21,6 +21,10 @@ int main() {
     float pibpercapita02;
     float superpoder01;
     float superpoder02;
+    int atributo1;
+    int atributo2;
+    int atributo3;
+    int atributo4;
 
 
     printf("Digite o codigo do estado da carta 01: \n");
@@ -61,6 +65,69 @@ int main() {
     printf(" O pib per capita : %.2f reais \n" , pibpercapita01);
     printf(" O valor do superpoder é : %.2f \n", superpoder01);
 
+    
+    printf(" Digite o primeiro atributo para comparar com o seu adversário : \n");
+
+    printf(" 1. população. \n");
+    printf(" 2. área. \n");
+    printf(" 3. pib. \n");
+    printf(" 4. Quantidade de pontos turisticos. \n");
+    printf(" 5. densidade populacioanl. \n");
+       scanf("%d" , &atributo1);
+    printf(" ok ! voçe escolheu %d. \n" , atributo1);
+
+    switch (atributo1)
+    {
+    case 1:
+    printf(" jogador da carta %d escolheu : Populacao - \n" , codigoestado01);
+        break;
+        case 2:
+        printf(" o jogador da carta %d escolheu :Área - \n" , codigoestado01);
+        break;
+        case 3:
+        printf(" o jogador da carta %d escolheu : Pib - \n", codigoestado01);
+        break;
+        case 4:
+        printf("o jogador da carta %d escolheu : Quantidade de pontos turisticos. - \n" , codigoestado01);
+        break;
+        case 5:
+        printf(" o jogador da carta %d escolheu : Densidade populacional. \n", codigoestado01);
+        break;
+    }
+
+ printf(" Digite o segundo atributo para comparar com o seu adversário : \n");
+
+    printf(" 1. população. \n");
+    printf(" 2. área. \n");
+    printf(" 3. pib. \n");
+    printf(" 4. Quantidade de pontos turisticos. \n");
+    printf(" 5. densidade populacioanl. \n");
+       scanf("%d" , &atributo2);
+    printf(" ok ! voçe escolheu %d. \n" , atributo2);
+
+    switch (atributo2)
+    {
+    case 1:
+    printf(" jogador da carta %d escolheu : Populacao - \n" , codigoestado01);
+        break;
+        case 2:
+        printf(" o jogador da carta %d escolheu :Área - \n" , codigoestado01);
+        break;
+        case 3:
+        printf(" o jogador da carta %d escolheu : Pib - \n", codigoestado01);
+        break;
+        case 4:
+        printf("o jogador da carta %d escolheu : Quantidade de pontos turisticos. - \n" , codigoestado01);
+        break;
+        case 5:
+        printf(" o jogador da carta %d escolheu : Densidade populacional. \n", codigoestado01);
+        break;
+    default: printf("opcao invalida. \n");
+    break;
+    }
+
+
+
     printf("Digite o codigo do estado da carta 02: \n");
     scanf("%d", &codigoestado02);
 
@@ -99,10 +166,62 @@ int main() {
     printf(" O pib per capita : %.2f reais \n" , pibpercapita02);
     printf(" O valor do superpoder é : %.2f \n", superpoder02);
 
-    if (superpoder01 > superpoder02)
-    {printf( "carta 01 venceu , seu valor é : %.2f \n", superpoder01);
+    printf(" Digite um atributo para comparar com o seu adversário : \n");
 
-    }else
-    { printf(" carta 02 venceu , seu valor é : %.2f \n", superpoder02);
+    printf(" 1. população. \n");
+    printf(" 2. área. \n");
+    printf(" 3. pib. \n");
+    printf(" 4. Quantidade de pontos turisticos. \n");
+    printf(" 5. densidade populacioanl. \n");
+    scanf("%d" , &atributo3);
+    printf(" ok! voçe escolheu %d \n." , atributo3);
+  
+
+
+    switch (atributo3)
+    {
+    case 1:
+    printf(" jogador da carta %d escolheu : Populacao - \n" , codigoestado02);
+        break;
+        case 2:
+        printf(" o jogador da carta %d escolheu :Área - \n" , codigoestado02);
+        break;
+        case 3:
+        printf(" o jogador da carta %d escolheu : Pib - \n", codigoestado02);
+        break;
+        case 4:
+        printf("o jogador da carta %d escolheu : Quantidade de pontos turisticos. - \n" , codigoestado02);
+        break;
+        case 5:
+        printf(" o jogador da carta %d escolheu : Densidade populacional. \n", codigoestado02);
+        break;
+    
+    default:
+    printf(" opcao invalida! \n");
+        break;
     }
-}
+
+    printf(" Digite o segundo atributo para comparar com o seu adversário : \n");
+
+    printf(" 1. população. \n");
+    printf(" 2. área. \n");
+    printf(" 3. pib. \n");
+    printf(" 4. Quantidade de pontos turisticos. \n");
+    printf(" 5. densidade populacioanl. \n");
+    scanf("%d" , &atributo4);
+    printf(" ok! voçe escolheu %d \n." , atributo4);
+
+    if (atributo1 == atributo2){
+         printf (" jogo empatou! \n");
+
+    } else if( atributo1 > atributo2)
+    
+    {   printf(" Nome dos estados caparados : %s x %s \n", nomeestado01, nomeestado02);
+        printf(" Atributos comparados :\n %d x %d \n", atributo1, atributo2);
+        printf(" Parabéns!!! O jogador da carta %d venceu. \n", codigoestado01);
+    
+    }else {
+        printf(" Nome dos estados caparados : %s x %s \n", nomeestado01, nomeestado02);
+        printf(" Atributos comparados :\n %d x %d \n", atributo1, atributo2);
+        printf(" parabéns!!! O jogador da carta %d venceu. \n", codigoestado02 );
+    }
